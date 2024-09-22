@@ -1,0 +1,387 @@
+* {
+    box-sizing: border-box;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif
+}
+
+.title-logo {
+    display: flex;
+    justify-content: center;
+    padding: 12px;
+    width: 100%;
+    height: 10rem;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    background: white;
+    overflow: hidden;
+    box-shadow: 0px 0px 5px 0.5px black;
+}
+
+.pokemon-container {
+    margin: 14.5rem 5.5rem 4rem 5.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 75px 60px;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.card {
+    border-radius: 10px;
+    outline: rgb(0, 0, 0) solid .2px;
+    border: .45rem solid gold;
+    height: 330px;
+    width: 240px;
+    transition: .5s;
+    padding: 16px;
+}
+
+.card-holder {
+    margin-top: 2px;
+    border: rgba(75, 75, 75, 0.466) solid .1px;
+    outline: .25rem solid gold;
+    border-radius: 4px;
+    width: 120px;
+    height: 120px;
+}
+
+.card-holder img {
+    max-width: 100px;
+    max-height: 100px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+li {
+    margin: 5px;
+}
+
+.pokemon-id {
+    margin-top: 10px;
+    font-weight: 550;
+    margin-bottom: -4px;
+}
+
+.pokemon-name {
+    margin-bottom: 14px;
+    font-weight: 600;
+}
+
+li span {
+    margin: 3px;
+    padding: 4px 8px;
+    border-radius: 5px;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px 1px 2px rgb(255, 255, 255);
+    font-weight: 550;
+    border: 0.1px outset black;
+}
+
+.card:hover {
+    transform: scale(1.08) translateY(-40px);
+    transition: .8s;
+}
+
+/* types */
+
+
+.card.ghost:hover img,
+.card-holder.ghost:hover img {
+    filter: drop-shadow(0 0 10px #A040A0) drop-shadow(0 0 5px rgb(61, 61, 61))
+}
+
+.card-holder.ghost {
+    background: radial-gradient(circle, #c076af 24%, #7b2d80);
+}
+
+.card.ghost {
+    background: radial-gradient(circle, #BD78AD 53%, #9D5FA0);
+}
+
+.ghost {
+    background-color: hsl(263, 27%, 47%);
+}
+
+.card.ground:hover img,
+.card-holder.ground:hover img {
+    filter: drop-shadow(0 0 10px brown) drop-shadow(0 0 5px #5f4f20);
+}
+
+.card-holder.ground {
+    background: radial-gradient(circle, #ec9b59 24%, #ce7647);
+}
+
+.card.ground {
+    background: radial-gradient(circle, #f1b682 53%, #ec9c47);
+}
+
+.ground {
+    background-color: #E2C56E;
+}
+
+.card.poison:hover img,
+.card-holder.poison:hover img {
+    filter: drop-shadow(0 0 10px #A040A0) drop-shadow(0 0 5px rgb(61, 61, 61));
+}
+
+.card-holder.poison {
+    background: radial-gradient(circle, #AF74B1 24%, #7A4FA0);
+}
+
+.card.poison {
+    background: radial-gradient(circle, #C6ABD2 53%, #8555A1);
+}
+
+.poison {
+    background-color: #A040A0;
+}
+
+.card.fairy:hover img,
+.card-holder.fairy:hover img {
+    filter: drop-shadow(0 0 10px #F9CCD3) drop-shadow(0 0 5px rgb(167, 145, 148));
+}
+
+.card-holder.fairy {
+    background: radial-gradient(circle, #F376B0 24%, #c75c8e);
+}
+
+.card.fairy {
+    background: radial-gradient(circle, #f39bc4 53%, #df4a90);
+}
+
+.fairy {
+    background-color: #F9CCD3;
+}
+
+.card.psychic:hover img,
+.card-holder.psychic:hover img {
+    filter: drop-shadow(0 0 10px #F85888) drop-shadow(0 0 5px rgb(61, 61, 61));
+}
+
+.card-holder.psychic {
+    background: radial-gradient(circle, rgb(233, 188, 188) 24%, #ae51b1);
+}
+
+.card.psychic {
+    background: radial-gradient(circle, rgb(233, 188, 188) 53%, #ae51b1);
+}
+
+.psychic {
+    background-color: #F85888;
+}
+
+.card.grass:hover img,
+.card-holder.grass:hover img {
+    filter: drop-shadow(0 0 10px #8BD46E) drop-shadow(0 0 5px rgb(16, 83, 27));
+}
+
+.card-holder.grass {
+    background: radial-gradient(circle, #B7D64D 24%, #7CB351);
+}
+
+.card.grass {
+    background: radial-gradient(circle, #D5E381 53%, #9AC34E);
+}
+
+.grass {
+    background-color: #8BD46E;
+}
+
+.card.fire:hover img,
+.card-holder.fire:hover img {
+    filter: drop-shadow(0 0 10px #FF6043) drop-shadow(0 0 5px rgb(129, 14, 14));
+}
+
+.card-holder.fire {
+    background: radial-gradient(circle, #fdb74d 24%, #f55f3d);
+}
+
+.card.fire {
+    background: radial-gradient(circle, #fcc089 53%, #eb4c30);
+}
+
+.fire {
+    background-color: #FF6043;
+}
+
+.card.normal:hover img,
+.card-holder.normal:hover img {
+    filter: drop-shadow(0 0 10px dimgray) drop-shadow(0 0 5px rgb(231, 231, 231));
+}
+
+.card-holder.normal {
+    background: radial-gradient(circle, #ffffff 24%, lightgray);
+}
+
+.card.normal {
+    background: radial-gradient(circle, #f8f8f8 53%, #cecece);
+}
+
+.normal {
+    background-color: silver;
+}
+
+.card.dragon:hover img,
+.card-holder.dragon:hover img {
+    filter: drop-shadow(0 0 10px #fccf3d) drop-shadow(0 0 5px #f8c20f);
+}
+
+.card-holder.dragon {
+    background: radial-gradient(circle, #dfa126 24%, #af9e06);
+}
+
+.card.dragon {
+    background: radial-gradient(circle, #C99B3E 53%, #B2B145);
+}
+
+.dragon {
+    background-color: #8B7DF1;
+}
+
+.card.steel:hover img,
+.card-holder.steel:hover img {
+    filter: drop-shadow(0 0 10px gray) drop-shadow(0 0 5px rgb(0, 0, 0));
+}
+
+.card-holder.steel {
+    background: radial-gradient(circle, white 24%, gray);
+}
+
+.card.steel {
+    background: radial-gradient(circle, lightgray 53%, rgb(92, 92, 92));
+}
+
+.steel {
+    background-color: #B7B7C5;
+}
+
+.card.electric:hover img,
+.card-holder.electric:hover img {
+    filter: drop-shadow(0 0 10px rgb(255, 251, 0)) drop-shadow(0 0 5px rgb(238, 255, 0));
+}
+
+.card-holder.electric {
+    background: radial-gradient(circle, #fffd80 24%, #ffd95e);
+}
+
+.card.electric {
+    background: radial-gradient(circle, rgb(255, 255, 132) 53%, #ffd95b);
+}
+
+.electric {
+    background-color: yellow;
+}
+
+.card.fighting:hover img,
+.card-holder.fighting:hover img {
+    filter: drop-shadow(0 0 10px brown) drop-shadow(0 0 5px #5f4f20);
+}
+
+.card-holder.fighting {
+    background: radial-gradient(circle, #EDA038 24%, #D77038);
+}
+
+.card.fighting {
+    background: radial-gradient(circle, #f3b15a 53%, #e9844e);
+}
+
+.fighting {
+    background-color: #C56E60;
+}
+
+.card.rock:hover img,
+.card-holder.rock:hover img {
+    filter: drop-shadow(0 0 10px brown) drop-shadow(0 0 5px #5f4f20);
+}
+
+.card-holder.rock {
+    background: radial-gradient(circle, #F8BA3B 24%, #E58239);
+}
+
+.card.rock {
+    background: radial-gradient(circle, #ffb41d 53%, #fa8735);
+}
+
+.rock {
+    background-color: #BBAA66;
+}
+
+.card.water:hover img,
+.card-holder.water:hover img {
+    filter: drop-shadow(0 0 10px rgb(122, 204, 255)) drop-shadow(0 0 5px rgb(0, 0, 119));
+}
+
+.card-holder.water {
+    background: radial-gradient(circle, #92bbee 34%, #36a0d1);
+}
+
+.card.water {
+    background: radial-gradient(circle, #bbdff3 53%, #3098cc);
+}
+
+.water {
+    background-color: #9AA8FF;
+}
+
+.card.bug:hover img,
+.card-holder.bug:hover img {
+    filter: drop-shadow(0 0 10px #29be44) drop-shadow(0 0 5px #26d346);
+}
+
+.card-holder.bug {
+    background: radial-gradient(circle, #B3D294 24%, #5BB36B);
+}
+
+.card.bug {
+    background: radial-gradient(circle, #d1f8a9 53%, #61da77);
+}
+
+.bug {
+    background-color: #B7C543;
+}
+
+.card.ice:hover img,
+.card-holder.ice:hover img {
+    filter: drop-shadow(0 0 10px rgb(35, 155, 230)) drop-shadow(0 0 5px rgb(24, 63, 78));
+}
+
+.card-holder.ice {
+    background: radial-gradient(circle, #a6e3ff 34%, #1da6e0);
+}
+
+.card.ice {
+    background: radial-gradient(circle, #89D1F3 53%, #2f9bc9);
+}
+
+.ice {
+    background-color: #7DD4FF;
+}
+
+.card.dark:hover img,
+.card-holder.dark:hover img {
+    filter: drop-shadow(0 0 10px #092b29) drop-shadow(0 0 5px #051816);
+}
+
+.card-holder.dark {
+    background: radial-gradient(circle, #0a7783 24%, #024d41);
+}
+
+.card.dark {
+    background: radial-gradient(circle, #078194 53%, #113f3c);
+}
+
+.dark {
+    background-color: #8B6E60;
+}
+
+.flying {
+    background-color: #A890F0;
+}
+
+.card:hover {
+    box-shadow: 0px 0px 10px 3px black;
+}
