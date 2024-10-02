@@ -37,15 +37,21 @@
     width: 240px;
     transition: .5s;
     padding: 16px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .card-holder {
-    margin-top: 2px;
+    margin-top: 10px;
     border: rgba(75, 75, 75, 0.466) solid .1px;
     outline: .25rem solid gold;
     border-radius: 4px;
-    width: 120px;
-    height: 120px;
+    width: 160px;
+    height: 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .card-holder img {
@@ -57,18 +63,18 @@
 }
 
 li {
-    margin: 5px;
+    margin: 10px 0px -20px 0px;
 }
 
 .pokemon-id {
     margin-top: 10px;
     font-weight: 550;
-    margin-bottom: -4px;
+    margin-bottom: -10px;
 }
 
 .pokemon-name {
     margin-bottom: 14px;
-    font-weight: 600;
+    font-weight: 800;
 }
 
 li span {
@@ -81,13 +87,22 @@ li span {
     border: 0.1px outset black;
 }
 
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
+}
+
+ul {
+    margin-top: -30px;
+}
+
 .card:hover {
     transform: scale(1.08) translateY(-40px);
     transition: .8s;
 }
 
 /* types */
-
 
 .card.ghost:hover img,
 .card-holder.ghost:hover img {
