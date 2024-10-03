@@ -15,7 +15,7 @@ $(document).ready(function () {
                 });
 
                 $('.pokemon-container').append(
-                    `<a href="Pokemon/pokemon.html?id=${id}" class="card ${firstType}">
+                    `<a href="pokemon/pokemon.html?id=${id}" class="card ${firstType}">
                         <div class="card-holder ${firstType}">
                             <img src="${image}" class="hires-image" alt="${name}">
                         </div>
