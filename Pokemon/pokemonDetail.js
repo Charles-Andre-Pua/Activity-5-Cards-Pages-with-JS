@@ -38,10 +38,10 @@ $(document).ready(function () {
                     <table>
                         <thead>
                             <td class="pokemon-id previous" >
-                                    ${prevPokemon ? `<a href="pokemon/pokemon.html?id=${prevId}"><img src="${prevPokemon["image"]["sprite"]}" alt="Previous Pokémon"></a>` : ''}
+                                    ${prevPokemon ? `<a href="Pokemon/pokemon.html?id=${prevId}"><img src="${prevPokemon["image"]["sprite"]}" alt="Previous Pokémon"></a>` : ''}
                             <td style="text-align: center";>${name}</td>
                             <td class="pokemon-id next">
-                                <a href="pokemon/pokemon.html?id=${nextId}"><img src="${nextPokemon["image"]["sprite"]}"</a></td>
+                                <a href="Pokemon/pokemon.html?id=${nextId}"><img src="${nextPokemon["image"]["sprite"]}"</a></td>
                         </thead>
                         <tbody>
                             <tr>
