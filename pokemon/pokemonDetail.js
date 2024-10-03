@@ -21,16 +21,17 @@ $(document).ready(function () {
                 let description = pokemon.description
                 let abilities = pokemon["profile"]["ability"]
                 let abilitiesHtml = "";
-                abilities.forEach(ability => {
-                    abilitiesHtml += `${ability[0]} `;
+                let abilitiesCount = abilities.length;
+                abilities.forEach((ability, index) => {
+                    abilitiesHtml += ability[0];
+                    // Add a comma only if it's not the last ability
+                    if (index < abilitiesCount - 1) {
+                        abilitiesHtml += ', ';
+                    }
                 });
+                let prevId = id > 1 ? id - 1 : null; 
+                let nextId = id < pokedex.length ? id + 1 : null; 
 
-
-                // Calculate previous and next IDs
-                let prevId = id > 1 ? id - 1 : null; // prevId remains null if id is 1
-                let nextId = id < pokedex.length ? id + 1 : null; // Ensure nextId is valid
-
-                // Get the previous and next Pokémon objects
                 let prevPokemon = prevId !== null ? pokedex.find(p => p.id === prevId) : null;
                 let nextPokemon = nextId !== null ? pokedex.find(p => p.id === nextId) : null;
               

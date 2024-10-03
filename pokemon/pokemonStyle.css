@@ -1,6 +1,6 @@
 table {
     border-collapse: collapse;
-    width: 90%;
+    width: 60%;
     height: 70vh;
     border-radius: 10px;
     outline: rgb(0, 0, 0) solid .2px;
@@ -46,7 +46,7 @@ ul {
 }
 
 .right-align {
-    text-align: right;
+    text-align: center;
 }
 
 li {
